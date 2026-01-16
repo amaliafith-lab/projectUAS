@@ -1,0 +1,450 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    background-color: white;
+    color: #333;
+}
+
+/* Header dan Navigasi */
+header {
+    background-color: #d67d96;
+    color: white; 
+    padding: 25px 30px; 
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    border-bottom: 1px solid #d67d96; 
+margin: 0;
+}
+
+.logo h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+nav a {
+    color: white; 
+    text-decoration: none;
+    
+    padding: 8px 15px; 
+    margin: 5px;
+    
+    border-radius: 5px; 
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #d67d96;
+}
+
+#tentang-kami-hero {
+    position: relative;
+    width: 100%;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 80px 20px;
+    overflow: hidden;
+
+    background: linear-gradient(
+        135deg,
+        #f3a6be,
+        #d67d96,
+        #c76a8a
+    );
+}
+
+#tentang-kami-hero::before {
+    content: "";
+    position: absolute;
+    width: 420px;
+    height: 420px;
+    background: radial-gradient(
+        circle,
+        rgba(255, 200, 220, 0.6),
+        rgba(214, 125, 150, 0)
+    );
+    top: -120px;
+    left: -120px;
+    border-radius: 50%;
+}
+
+#tentang-kami-hero::after {
+    content: "";
+    position: absolute;
+    width: 480px;
+    height: 480px;
+    background: radial-gradient(
+        circle,
+        rgba(255, 180, 210, 0.5),
+        rgba(214, 125, 150, 0)
+    );
+    bottom: -160px;
+    right: -160px;
+    border-radius: 50%;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    padding: 30px;
+}
+
+.hero-content h2 {
+    font-size: 3.5em;
+    margin-bottom: 20px;
+    letter-spacing: 1px; 
+    color: white;
+}
+
+.hero-content p {
+    font-size: 1.2em; 
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: #e0e0e0; 
+}
+
+/* Style untuk tombol */
+.hero-button {
+    background-color: #e2b4c100;
+    color: rgba(255, 255, 255, 0.801);
+    padding: 12px 25px;
+    border: none;
+    border-style: groove;
+    border-radius: 5px;
+    font-size: normal;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.hero-button:hover {
+    background-color: #d67d96; 
+}
+
+/* untuk "Tentang Kami" */
+
+.aboutus {
+    display: flex; 
+    align-items: center; 
+    gap: 30px; 
+    flex-wrap: wrap; 
+}
+
+.gambar {
+    flex: 1; 
+    min-width: 300px; 
+}
+
+.gambar img {
+    width: 80%; 
+    border-radius: 10px; 
+}
+
+.about-teks {
+    flex: 1; 
+    min-width: 300px; 
+}
+
+/* Style untuk "TENTANG KAMI" */
+.tag-pink {
+    background-color: #f7dae7; 
+    color: #d67d96; 
+    padding: 5px 10px;
+    font-size: 1em;
+    font-weight: bold;
+    border-radius: 5px;
+    letter-spacing: 1px; 
+}
+
+.about-teks h2 {
+    font-size: 2.5em;
+    color: #d67d96; 
+    margin-top: 15px; 
+    margin-bottom: 15px; 
+}
+
+.about-teks p {
+    color: #666;
+    line-height: 1.6; 
+}
+.content-kerjac{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    padding: 20px;
+    width: 50%;
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+/* Struktur utama halaman */
+.container {
+    max-width: 1200px; 
+    margin: 30px auto; 
+    padding: 20px;
+    text-align: center;
+}
+
+.content-promo {
+    background-color: rgba(255, 255, 255, 0.747);
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1); 
+    border-radius: 10px;
+    color: #d67d96;
+}
+
+.content h2{
+    color: #d67d96;
+    font-size: 2.5em;
+}
+
+/*Catalog Produk */
+.catalog-container {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 30px;
+    padding: 20px 0;
+    justify-content: center; 
+}
+
+.product-card {
+    width: 250px; 
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3 ease;
+    scroll-snap-align: start;
+}
+
+.product-card img {
+    width: 100%; 
+    aspect-ratio: 1/1;
+    border-radius: 15px 15px 0 0; 
+}
+
+.product-card h3 {
+    margin: 10px 0 5px;
+    color: #d67d96;
+}
+
+.product-card .price {
+    color: #008cba;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.product-card button {
+    background-color: #d67d96; 
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-bottom: 15px;
+}
+
+.product-card button:hover {
+    background-color: #c26a82; 
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.2);
+}
+
+section {
+    scroll-margin-top: 120px;
+}
+
+/* footer */
+footer {
+    background-color: #d67d96; 
+    color: white;
+    padding: 40px 20px 10px 20px; 
+    margin-top: 30px;
+}
+
+.footer-container {
+    display: flex; 
+    justify-content: space-around; 
+    flex-wrap: wrap; 
+    max-width: 1200px;
+    margin: 0 auto; 
+}
+
+.footer-col {
+    width: 300px; 
+    margin-bottom: 20px;
+}
+
+.footer-col h3 {
+    margin-bottom: 15px;
+    font-size: 2.5em;
+    padding-bottom: 5px;
+}
+
+.footer-col p {
+    line-height: 1.6; 
+}
+
+/* Style untuk Link Cepat */
+.footer-col ul {
+    list-style: none; 
+    padding: 0;
+}
+
+.footer-col ul li {
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+    color: white;
+    text-decoration: none;
+    transition: padding-left 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+    color: #f7dae7; 
+    padding-left: 5px; 
+}
+
+/* Style untuk form Newsletter */
+.newsletter-form input[type="email"] {
+    width: 70%;
+    padding: 10px;
+    border: none;
+}
+
+.newsletter-form button {
+    padding: 10px;
+    border: none;
+    background-color: #e2b4c1; 
+    color: #5D3587; 
+    cursor: pointer;
+    margin-left: -5px; 
+    font-weight: bold;
+}
+
+
+/* Bagian Copyright */
+.footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 15px;
+    border-top: 1px solid #e2b4c1; 
+    font-size: 0.9em;
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start; /* Rata kiri */
+    }
+    
+    nav {
+        margin-top: 10px;
+        width: 100%;
+        justify-content: space-around; 
+    }
+    
+    nav a {
+        padding: 8px 5px; 
+        margin: 0;
+    }
+}
+
+/* ==== RESPONSIVE ==== */
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    nav {
+        margin-top: 10px;
+    }
+
+    nav a {
+        display: block;
+        padding: 10px 0;
+    }
+    
+    .navbar ul {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        background: #ffb6c1;
+        width: 100%;
+        flex-direction: column;
+        text-align: center;
+        display: none;
+    }
+
+    #menu-toggle:checked ~ .nav-links {
+        display: flex;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .hero-content h2 {
+        font-size: 1.6rem;
+    }
+
+    .aboutus {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+.product-card {
+    background: #fff;
+    border-radius: 18px;
+    padding: 10px;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+    text-align: center;
+}
+
+.product-card h3 {
+    margin: 12px 0 16px;
+    color: #d67d96;
+}
+
+/* container tombol */
+.btn-wrap {
+    margin-top: 10px;   /* INI YANG BIKIN ADA SPACE */
+}
+
+/* tombol */
+.view {
+    display: inline-block;
+    background: #d67d96;
+    color: white;
+    padding: 10px 22px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+/* efek pencet */
+.view:hover {
+    box-shadow: 0 6px 14px rgba(214,125,150,0.5);
+    transform: translateY(-2px);
+}
+

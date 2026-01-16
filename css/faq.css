@@ -1,0 +1,152 @@
+/* ==== RESET ==== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* ==== HEADER ==== */
+header {
+    background-color: #d67d96;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 8%;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo h1 {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+/* ==== NAVBAR ==== */
+.navbar ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: #ff0080;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 26px;
+    cursor: pointer;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+/* ==== HERO ==== */
+.faq-hero {
+    background: linear-gradient(rgba(255,182,193,0.6), rgba(255,182,193,0.6)),
+                url("/img/bg.jpeg") center/cover no-repeat;
+    color: #fff;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.hero-content h2 {
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+}
+
+.hero-content p {
+    font-size: 1.1rem;
+}
+
+/* ==== FAQ SECTION ==== */
+.faq-section {
+    padding: 60px 8%;
+    background: #fff;
+}
+
+.faq-section h2 {
+    text-align: center;
+    color: #ff69b4;
+    margin-bottom: 40px;
+}
+
+.faq-item {
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 15px;
+}
+
+.faq-question {
+    width: 100%;
+    background: #ffe4ec;
+    border: none;
+    text-align: left;
+    padding: 15px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #d67d96;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.faq-question:hover {
+    background: #d67d96;
+    color: #fff;
+}
+
+.faq-answer {
+    display: none;
+    padding: 15px;
+    font-size: 0.95rem;
+    color: #d67d96;
+    background: #fff9fb;
+    border-radius: 8px;
+}
+
+/* ==== FOOTER ==== */
+footer {
+    background: #d67d96;
+    color: #fff;
+    text-align: center;
+    padding: 25px 10px;
+    font-size: 0.9rem;
+}
+
+/* ==== RESPONSIVE ==== */
+@media (max-width: 768px) {
+    .navbar ul {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        background: #d67d96;
+        width: 100%;
+        flex-direction: column;
+        text-align: center;
+        display: none;
+    }
+
+    #menu-toggle:checked ~ .nav-links {
+        display: flex;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .hero-content h2 {
+        font-size: 1.6rem;
+    }
+}
